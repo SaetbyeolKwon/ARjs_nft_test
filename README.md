@@ -1,2 +1,2 @@
 # ARjs_nft_test
- testest
+https://saetbyeolkwon.github.io/ARjs_nft_test/ 
