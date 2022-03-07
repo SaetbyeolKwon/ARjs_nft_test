@@ -8,7 +8,7 @@
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
     <script src = "./js/tap.js"></script>
     <!-- <script src="https://unpkg.com/aframe-animation-component@3.2.1/dist/aframe-animation-component.min.js"></script> -->
-    <!-- <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script> -->
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/tween.js/16.3.5/Tween.min.js"></script>
     <style>
       .arjs-loader {
@@ -37,50 +37,53 @@
       <div>Loading, please wait...</div>
     </div> -->
 
-    <a-scene
-      background = "color: grey"
-    >
-    
     <!-- <a-scene
-      background = "color: gray"
+      background = "color: grey"
+      cursor="rayOrigin: mouse; fuse: false"
+      raycaster="objects: .raycastable, [link]"
+    > -->
+
+    <!-- camera settings-->
+    <!-- <a-entity id="rig" rotation = "0 0 0">
+        <a-entity id="camera" camera look-controls> -->
+    
+    <a-scene
       vr-mode-ui="enabled: false;"
       renderer="logarithmicDepthBuffer: true;"
       embedded
       arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
-    > -->
-      <!-- <a-nft
+      cursor="rayOrigin: mouse; fuse: false"
+      raycaster="objects: .raycastable, [link]"
+    >
+      <a-nft
         type="nft"
-        url="./assets/moet_imperial_icone-1096x1248"
+        url="./ARjs_nft_test/assets/moet_imperial_icone-1096x1248"
         smooth="true"
         smoothCount="10"
         smoothTolerance=".01"
         smoothThreshold="5"
-      > -->
-
-        <!-- <a-entity id="box" geometry="primitive: sphere"
-          material="color: #EFEFEF; shader: flat"
-          position="0 0.15 -5"
-          light="type: point; intensity: 5"
-          animation="property: position; easing: easeInOutQuad; dir: alternate; dur: 1000; to: 0 -0.10 -5; loop: true"></a-entity>
-
-        <a-box position = "0 2 -2" scale = "1 1 1" animation = "property: rotation; to: 0 360 0; easing: easeInOutQuad; loop: true; dur: 2000" color = "mediumseagreen" light="type: point; intensity: 5"></a-box> -->
+      >
 
         <a-entity
+          class = "raycastable"
           id = "cylinder"
-          gltf-model="./assets/Cylinder.glb"
+          gltf-model="./ARjs_nft_test/assets/Cylinder.glb"
           scale="0.3 0.3 0.3"
           position="0 2 -2"
           animation = "property: rotation; to: 0 360 0; easing: easeInOutQuad; loop: true; dur: 5000"
           cursor-listener
         >
         </a-entity>
-      <!-- </a-nft> -->
+      </a-nft>
 
       <a-entity id="light" light="type: ambient; color: #fff"></a-entity>
       <a-light type="directional" intensity="1.5" position="0 1 0"></a-light>
       
       <!-- camera -->
-      <!-- <a-entity camera></a-entity> -->
+      <a-entity id="rig" position = "0 2 0">
+        <a-entity id="camera" camera>
+        </a-entity>
+        </a-entity>
 
     </a-scene>
   </body>
