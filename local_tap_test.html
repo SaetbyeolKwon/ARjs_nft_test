@@ -48,12 +48,12 @@
         <a-entity id="camera" camera look-controls> -->
     
     <a-scene
-      vr-mode-ui="enabled: false;"
-      renderer="logarithmicDepthBuffer: true;"
-      embedded
-      arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
-      cursor="rayOrigin: mouse; fuse: false"
-      raycaster="objects: .raycastable, [link]"
+        vr-mode-ui="enabled: false;"
+        renderer="logarithmicDepthBuffer: true;"
+        embedded
+        arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
+        cursor="rayOrigin: mouse; fuse: false"
+        raycaster="objects: .raycastable, [link]"
     >
       <a-nft
         type="nft"
@@ -67,7 +67,7 @@
         <a-entity
           class = "raycastable"
           id = "cylinder"
-          gltf-model="./ARjs_nft_test/assets/Cylinder.glb"
+          gltf-model="./assets/Cylinder.glb"
           scale="0.3 0.3 0.3"
           position="0 2 -2"
           animation = "property: rotation; to: 0 360 0; easing: easeInOutQuad; loop: true; dur: 5000"

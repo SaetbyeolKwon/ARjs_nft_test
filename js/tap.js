@@ -5,6 +5,7 @@ AFRAME.registerComponent('cursor-listener', {
 
     var targetEl = document.querySelector('#cylinder');
     targetEl.addEventListener('click', function() {
+        targetEl.setAttribute('animation', {property: 'rotation'});
         targetEl.setAttribute('animation', {to: '0 -360 0'});
         console.log('I was clicked.');
     });

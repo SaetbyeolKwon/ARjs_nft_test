@@ -36,26 +36,23 @@
     <!-- <div class="arjs-loader">
       <div>Loading, please wait...</div>
     </div> -->
-
-    <a-scene
-      background = "color: grey"
-    >
     
-    <!-- <a-scene
-      background = "color: gray"
+    <a-scene
       vr-mode-ui="enabled: false;"
       renderer="logarithmicDepthBuffer: true;"
       embedded
       arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
-    > -->
-      <!-- <a-nft
+      cursor="rayOrigin: mouse; fuse: false"
+      raycaster="objects: .raycastable, [link]"
+    >
+      <a-nft
         type="nft"
         url="./assets/moet_imperial_icone-1096x1248"
         smooth="true"
         smoothCount="10"
         smoothTolerance=".01"
         smoothThreshold="5"
-      > -->
+      >
 
         <!-- <a-entity id="box" geometry="primitive: sphere"
           material="color: #EFEFEF; shader: flat"
